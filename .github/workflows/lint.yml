@@ -2,9 +2,8 @@ name: Lint &  Build
 on:
   push:
     branches: [main]
-  pull_request:
  
- jobs:
+jobs:
   format:
     name: Format
     runs-on: ubuntu-latest

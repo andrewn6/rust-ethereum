@@ -1,0 +1,22 @@
+name: Lint &  Build
+on:
+  push:
+    branches: [main]
+  pull_request:
+ 
+ jobs:
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+        profile: minimal
+        toolchain: stable
+        components: rustfmt
+    - name: Format
+      run: cargo fmt -- --check
+

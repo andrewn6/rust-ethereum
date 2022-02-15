@@ -59,4 +59,13 @@ impl Opcode {
   pu const NUMBER: Opcode = Opcode(0x43);
   pub const DIFFICULTY: Opcode = Opcode(0x44);
   pub const GASLIMIT: Opcode = Opcode(0x45);
+  pub const SLOAD: Opcode = Opcode(0x54);
+  pub const SSTORE: Opcode = Opcode(0x55);
+  pub const GAS: Opcode = Opcode(0x5a);
+
+  pub const LOG0: Opcode = Opcode(0xa0);
+  pub const LOG1: Opcode = Opcode(0xa1);
+  pub const LOG2: Opcode = Opcode(0xa2);
+  pub const LOG3: Opcode = Opcode(0xa3);
+  pub const LOG4: Opcode = Opcode(0xa4);
  }

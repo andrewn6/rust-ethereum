@@ -1,11 +1,17 @@
 {
-  description = "A very basic flake";
+  description = "EVM implementation in Rust";
 
-  outputs = { self, nixpkgs }: {
-
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    defaultPackage.x86_64-linux = self.packages.x86_64-linux.hello;
-
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    utils.url = "github:numtide/flake-utils";
   };
-}
+
+  outputs = { self, nixpkgs, utils }: utils.lib.eachDefaultSystem (system:
+    let pkgs = nixpkgs.legacyPackages.${system}; in
+    {
+      shell = import ./shell.nix { inherit pkgs; };
+      
+    }
+   );
+  
+ }

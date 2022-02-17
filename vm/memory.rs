@@ -1,5 +1,5 @@
 use alloc::vec::Vec;
-use primitive_types::U256
+use primitive_types::U256;
 
 pub struct Memory {
     data: Vec<u8>,

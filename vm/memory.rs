@@ -8,3 +8,11 @@ pub struct Memory {
     store: Vec<u8>,
     lastGascost: U256, 
 }
+
+impl Memory {
+    fn new(limit: usize) -> Self {
+        Self {
+            data: Vec::new()
+        }
+    }
+}

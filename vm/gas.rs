@@ -8,9 +8,7 @@ impl Gas {
     pub const GasMidStep: Gas = Gas(8);
     pub const GasSlowStep: Gas = Gas(10);
     pub const GasExtStep: Gas = Gas(20);
-
 }
 
-pub fn main() {
+fn callGas () {
 }
-

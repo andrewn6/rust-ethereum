@@ -1,6 +1,7 @@
 use alloc::vec::Vec;
 use primitive_types::U256;
 
+#[derive(Clone, Debug)]
 pub struct Memory {
     data: Vec<u8>,
     effective_len: U256,
@@ -11,8 +12,12 @@ pub struct Memory {
 
 impl Memory {
     fn new(limit: usize) -> Self {
-        Self {
+        elf {
             data: Vec::new()
         }
+    }
+
+    pub fn limit(&self) -> usize {
+        self.limit
     }
 }

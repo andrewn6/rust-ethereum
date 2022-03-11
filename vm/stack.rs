@@ -30,4 +30,9 @@ impl Stack {
     pub fn is_empty(&self) -> usize {
         self.data.is_empty()
     }
+
+    pub fn data(&self) -> &Vec<H256> {
+        // return &self.data
+        &self.data
+    }
 }

@@ -6,5 +6,12 @@ use alloc::vec::Vec;
 pub struct Stack {
     // set data to uint256
     data: Vec<H256>,
-    limit: usize,
+}
+
+impl Stack {
+    pub fn new_stack() -> Self {
+        Self {
+            data:: Vec::new(),
+        }
+    }
 }

@@ -12,7 +12,7 @@ pub struct Memory {
 
 impl Memory {
     fn new(limit: usize) -> Self {
-        elf {
+        self {
             data: Vec::new()
         }
     }

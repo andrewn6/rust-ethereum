@@ -1,3 +1,5 @@
+use primitive_types::U256;
+
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
 pub struct Gas(pub u64);
 
@@ -8,7 +10,17 @@ impl Gas {
     pub const GasMidStep: Gas = Gas(8);
     pub const GasSlowStep: Gas = Gas(10);
     pub const GasExtStep: Gas = Gas(20);
+
 }
 
-fn callGas () {
+pub fn callGas(&mut isEip150: bool, availableGas, base: U256, callCost: U256) -> U256 {
+    if isEip150 {
+        availableGas = availableGas - base;
+        gas := availableGas = availableGas/64;
+
+    } else {
+        if !callCost() == U256 {
+            return 0
+        }
+    }
 }

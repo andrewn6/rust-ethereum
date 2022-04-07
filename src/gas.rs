@@ -13,10 +13,10 @@ impl Gas {
 
 }
 
-pub fn callGas(&mut isEip150: bool, availableGas, base: U256, callCost: U256) -> U256 {
+pub fn callGas(isEip150: bool, availableGas, base: U256, callCost: U256) -> U256 {
     if isEip150 {
         availableGas = availableGas - base;
-        gas := availableGas = availableGas/64;
+        gas_current == availableGas = availableGas/64;
 
     } else {
         if !callCost() == U256 {

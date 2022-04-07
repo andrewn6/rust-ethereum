@@ -1,5 +1,5 @@
 // uint256
-use primitive_types::H256
+use primitive_types::H256;
 use alloc::vec::Vec;
 
 #[derive(Debug, Clone)]
@@ -10,6 +10,7 @@ pub struct Stack {
     limit: usize
 }
 
+// Implementation of Stack
 impl Stack {
     pub fn new_stack(limit: usize) -> Self {
         Self {

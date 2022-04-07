@@ -1,4 +1,4 @@
-#[derive(Clone, Copy, Debug, Eq, PartialEq])
+[derive(Clone, Copy, Debug, Eq, PartialEq])
 pub struct Opcode(pub u8);
 
 impl Opcode {
